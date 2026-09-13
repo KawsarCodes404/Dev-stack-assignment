@@ -44,6 +44,7 @@ const banner = () => {
                     <img
                         src={bannerimg}
                         alt=""
+                        className="flex justify-center w-[570px]"
                     />
                 </div>
             </div>
