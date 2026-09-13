@@ -2,7 +2,7 @@ import devLogo from "../assets/logo-text.png"
 
 const Footer = () => {
     return (
-        <div className="w-full border-t border-gray-200 mb-[50px]">
+        <div className="w-full border-t border-gray-200 mb-[50px] pt-[50px]">
             <div className="container mx-auto">
                 {/* footer top div */}
                 <div className="border-b border-gray-200 pb-[20px]">
