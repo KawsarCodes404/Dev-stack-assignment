@@ -3,7 +3,7 @@ import bannerimg from "../assets/banner-stack.png"
 const banner = () => {
     return (
         <div>
-            <div className="flex justify-between items-center container mx-auto">
+            <div className="flex justify-between items-center container mx-auto mt-[40px]">
                 {/* left */}
                 <div>
                     {/* left-heading */}
@@ -25,14 +25,14 @@ const banner = () => {
                     </p>
 
                     {/* Button start */}
-                    <div>
+                    <div className="mt-8 flex gap-5">
                         {/* left button */}
-                        <button>
+                        <button className="text-white bg-gradient-to-r from-orange-500 to-pink-600 px-[10px] py-[10px] rounded-xl font-medium">
                             Explore Technologies
                         </button>
 
                         {/* right button */}
-                        <button className="">
+                        <button className="border border-slate-300 rounded-lg px-[45px] text-slate-700">
                             Learn More
                         </button>
                     </div>
