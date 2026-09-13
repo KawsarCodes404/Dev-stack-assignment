@@ -1,4 +1,4 @@
-export interface TechCardType {
+export interface ICardType {
   id: number;
   name: string;
   icon: string;

@@ -1,9 +1,14 @@
 import { use } from "react";
+import type { ICardType } from "../../types/techcardtype";
 
-const Cards = ({cardsPromise}) => {
+interface CardsProps {
+    cardsPromise : Promise<ICardType[]>;
+}
+
+const Cards = ({cardsPromise} : CardsProps) => {
 
     const cards = use(cardsPromise);
-    
+
     return (
         <div>
             
