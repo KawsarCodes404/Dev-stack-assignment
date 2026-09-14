@@ -15,20 +15,18 @@ const Cards = ({ cardsPromise }: CardsProps) => {
 
 
   const handleAdd = (card: ICardType) => {
-    const isAdded = stack.find((item) => item.id === card.id);
-
     setStack([...stack, card]);
     toast.success(`${card.name} added to your stack !`);
   };
 
 
   const handleRemove = (id: string) => {
-    const removedItem = stack.find((item) => item.id === id);
+    const deletedCard = stack.find((item) => item.id === id);
 
     setStack(stack.filter((item) => item.id !== id));
 
-    if (removedItem) {
-      toast.info(`${removedItem.name} removed from your stack!`);
+    if (deletedCard) {
+      toast.info(`${deletedCard.name} removed from your stack!`);
     }
   };
 
