@@ -15,15 +15,15 @@ const CardGrid = ({ cards, handleAdd, stack, handleRemove, handleRemoveAll }: Ca
     return (
         <div>
             {/* Now the cards part */}
-            <div className="grid grid-cols-4">
+            <div className="grid grid-cols-4 gap-7">
 
                 {/* 3 cols span space it takes ! */}
-                <LeftCards cards = {cards} handleAdd = {handleAdd} stack = {stack} />
+                <LeftCards cards={cards} handleAdd={handleAdd} stack={stack} />
 
 
 
                 {/* Right side your stack bar & it takes 1 cols span space */}
-                <StackCard />
+                <StackCard stack = {stack} handleRemove={handleRemove} handleRemoveAll={handleRemoveAll} />
             </div>
         </div>
     );

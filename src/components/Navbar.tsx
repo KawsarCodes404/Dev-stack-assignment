@@ -2,7 +2,8 @@ import devLogo from "../assets/logo-text.png"
 
 const Navbar = () => {
     return (
-        <nav className="sticky top-0 z-50 w-full border-b border-gray-200">
+        <nav className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white">
+
             <div className="flex justify-between container mx-auto py-[25px] ">
                 {/* left */}
                 <div>
