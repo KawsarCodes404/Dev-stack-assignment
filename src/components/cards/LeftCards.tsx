@@ -8,6 +8,8 @@ interface LeftCardsProps {
 
 
 const LeftCards = ({ handleAdd, cards, stack }: LeftCardsProps) => {
+
+
     return (
 
         <div className="col-span-3 grid grid-cols-3 gap-6">
@@ -57,9 +59,12 @@ const LeftCards = ({ handleAdd, cards, stack }: LeftCardsProps) => {
                         {/* Bottom button part */}
                         <button
                             onClick={() => handleAdd(card)}
-                            className="mt-6 bg-[#080D1C] text-sm rounded-lg py-[10px] text-white w-full"
+                            disabled={!!stack.find((item) => item.id === card.id)}
+                            className="mt-6 w-full rounded-lg bg-[#080D1C] py-[10px] text-sm text-white disabled:cursor-not-allowed disabled:bg-gray-400"
                         >
-                            Add to Stack
+                            {stack.find((item) => item.id === card.id)
+                                ? "✓ Added to Stack"
+                                : "Add to Stack"}
                         </button>
                     </div>
                 ))

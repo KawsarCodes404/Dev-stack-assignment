@@ -2,6 +2,8 @@ import { use, useState } from "react";
 import type { ICardType } from "../../types/techcardtype";
 import CardGrid from "./CardGrid";
 
+import { toast } from "react-toastify";
+
 interface CardsProps {
   cardsPromise: Promise<ICardType[]>;
 }
@@ -12,14 +14,10 @@ const Cards = ({ cardsPromise }: CardsProps) => {
   const [stack, setStack] = useState<ICardType[]>([]);
 
   const handleAdd = (card: ICardType) => {
-    const isAdded = stack.find((stackcard) => stackcard.id === card.id);
-
-    if (isAdded) {
-      alert(`${card.name} is already in your stack !`);
-      return;
-    }
 
     setStack([...stack, card]);
+
+    toast.success(`${card.name} added to your stack !`);
   }
 
   const handleRemove = (id: number) => {

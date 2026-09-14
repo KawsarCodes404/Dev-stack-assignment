@@ -30,7 +30,7 @@ const StackCard = ({ handleRemove, handleRemoveAll, stack }: StackCardProps) => 
                 </p>
             </div>) : (<StackCardContent stack={stack} handleRemove={handleRemove} />)}
 
-            {/* Remove All Button */}
+            {/* Remove All Button of stack card */}
             <button
                 onClick={handleRemoveAll}
                 className="mt-6 w-full rounded-lg border border-red-400 py-3 text-lg font-semibold text-red-500"
