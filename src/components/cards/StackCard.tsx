@@ -30,6 +30,8 @@ const StackCard = ({ handleRemove, handleRemoveAll, stack }: StackCardProps) => 
                 </p>
             </div>) : (<StackCardContent stack={stack} handleRemove={handleRemove} />)}
 
+
+
             {/* Remove All Button of stack card */}
             <button
                 onClick={handleRemoveAll}
