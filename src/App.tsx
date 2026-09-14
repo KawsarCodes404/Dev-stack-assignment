@@ -25,7 +25,7 @@ function App() {
 
         <Banner/>
 
-        <Suspense fallback = {<h2>loading...</h2>}>
+        <Suspense fallback = {<h2>loading the desired content wait brother...</h2>}>
                     <Cards cardsPromise = {cardsPromise} />
         </Suspense>
 

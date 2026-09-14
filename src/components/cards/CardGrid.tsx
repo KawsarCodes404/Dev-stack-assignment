@@ -15,7 +15,7 @@ const CardGrid = ({ cards, handleAdd, stack, handleRemove, handleRemoveAll }: Ca
     return (
         <div>
             {/* Now the cards part */}
-            <div className="grid grid-cols-4 gap-7">
+            <div className="grid grid-cols-4 gap-7 mb-[60px] pb-[30px]">
 
                 {/* 3 cols span space it takes ! */}
                 <LeftCards cards={cards} handleAdd={handleAdd} stack={stack} />
