@@ -13,19 +13,29 @@ const Cards = ({ cardsPromise }: CardsProps) => {
 
   const [stack, setStack] = useState<ICardType[]>([]);
 
+
   const handleAdd = (card: ICardType) => {
+    const isAdded = stack.find((item) => item.id === card.id);
 
     setStack([...stack, card]);
-
     toast.success(`${card.name} added to your stack !`);
-  }
-
-  const handleRemove = (id: number) => {
-    setStack(stack.filter((item) => item.id !== id))
   };
+
+
+  const handleRemove = (id: string) => {
+    const removedItem = stack.find((item) => item.id === id);
+
+    setStack(stack.filter((item) => item.id !== id));
+
+    if (removedItem) {
+      toast.info(`${removedItem.name} removed from your stack!`);
+    }
+  };
+
 
   const handleRemoveAll = () => {
     setStack([]);
+    toast.info("All technologies removed from your stack!");
   };
 
 
@@ -45,7 +55,7 @@ const Cards = ({ cardsPromise }: CardsProps) => {
           </h1>
 
           <p className="mt-2 text-[18px] text-[#64748B]">
-            Pick one technology per category to build your ideal stack.        </p>
+            Pick one technology per category to build your ideal stack.</p>
         </div>
 
 

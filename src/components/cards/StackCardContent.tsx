@@ -2,15 +2,15 @@ import type { ICardType } from "../../types/techcardtype";
 
 interface StackCardContentProps {
     stack: ICardType[];
-    handleRemove: (id: number) => void;
+    handleRemove: (id: string) => void;
 }
 
 const StackCardContent = ({ stack, handleRemove }: StackCardContentProps) => {
     return (
         <div className="flex flex-col gap-3.5 mt-[20px]">
 
-            {stack.map((item) => (
-                <div className="flex items-center rounded-lg border justify-between p-3 border-gray-200">
+            {stack.map((item, idx) => (
+                <div className="flex items-center rounded-lg border justify-between p-3 border-gray-200" key={idx}>
                     {/* Left part of the card items */}
                     <div className="flex items-center gap-3">
 
@@ -42,7 +42,7 @@ const StackCardContent = ({ stack, handleRemove }: StackCardContentProps) => {
                             <span className="absolute left-1/2 top-1/2 h-8 w-[3px] -translate-x-1/2 -translate-y-1/2 -rotate-45 bg-gray-400"></span>
                         </button>
                     </div>
-                    
+
                 </div>
             ))}
 

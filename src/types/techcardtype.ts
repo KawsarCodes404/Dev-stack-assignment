@@ -1,5 +1,5 @@
 export interface ICardType {
-  id: number;
+  id: string;
   name: string;
   icon: string;
   badge: string;

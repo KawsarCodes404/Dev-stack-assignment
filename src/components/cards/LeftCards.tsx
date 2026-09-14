@@ -12,10 +12,10 @@ const LeftCards = ({ handleAdd, cards, stack }: LeftCardsProps) => {
 
     return (
 
-        <div className="col-span-3 grid grid-cols-3 gap-6">
+        <div className="col-span-3 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {
                 cards.map((card) => (
-                    <div className="rounded-xl border border-gray-100 p-5">
+                    <div className="rounded-xl border border-gray-100 p-5" key={card.id}>
 
                         {/* icon & sign */}
                         <div className="flex justify-between items-center">
@@ -32,9 +32,7 @@ const LeftCards = ({ handleAdd, cards, stack }: LeftCardsProps) => {
                         </div>
 
                         {/* Description start */}
-                        <p className="mt-2 text-sm text-[#64748B]">A declarative, component-based
-                            JavaScript library for building modern user
-                            interfaces.</p>
+                        <p className="mt-2 text-sm text-[#64748B]">{card.description}</p>
 
 
                         {/* Some information */}
@@ -51,7 +49,7 @@ const LeftCards = ({ handleAdd, cards, stack }: LeftCardsProps) => {
 
                             {/* right */}
                             <span className="text-gray-700">
-                                {card.rating}
+                                ⭐ {card.rating}
                             </span>
                         </div>
 

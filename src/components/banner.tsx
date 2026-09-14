@@ -12,7 +12,7 @@ const banner = () => {
 
                         <br />
 
-                        <span className="bg-gradient-to-r from-orange-500 to-pink-600 bg-clip-text text-transparent">
+                        <span className="brand-gradient bg-clip-text text-transparent">
                             Development Stack
                         </span>
                     </h1>
@@ -26,7 +26,7 @@ const banner = () => {
 
                     {/* Button start */}
                     <div className="mt-8 flex gap-5">
-                        {/* left button */}
+                        {/* left button */}  {/*Now this not needed for mr for resuability i think bg-gradient-to-r from-orange-500 to-pink-600*/}
                         <button className="text-white bg-gradient-to-r from-orange-500 to-pink-600 px-[10px] py-[10px] rounded-xl font-medium">
                             Explore Technologies
                         </button>

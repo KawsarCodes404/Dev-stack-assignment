@@ -2,7 +2,7 @@ import type { ICardType } from "../../types/techcardtype";
 import StackCardContent from "./StackCardContent";
 
 interface StackCardProps {
-    handleRemove: (id: number) => void;
+    handleRemove: (id : string) => void;
     handleRemoveAll: () => void;
     stack: ICardType[];
 }
